@@ -25,5 +25,5 @@ class Staff(Person):
     def order_repair_materials(self, material_list):
         pass
 
-    if __name__ == "__main__":
-        s1 = Staff("s400" , "mmd" , "reza" , 21)
+if __name__ == "__main__":
+    s1 = Staff("s400" , "mmd" , "reza" , 21)
