@@ -12,6 +12,7 @@ class Admin(Person):
         staff_role = input("new staff role: ")
         if staff_details.id_ not in self.staff_members:
             self.staff_members[staff_details.staff_id] = staff_details
+            print("added!")
         else:
             print("existed!")
         
@@ -20,11 +21,15 @@ class Admin(Person):
         for obj_id in self.staff_members:
             if obj_id == staff_id:
                 self.staff_members.pop(obj_id)
+                print("removed")
             else:
                 print("not exist!")
-    def update_staff_role(self, staff_id, new_role):
-        pass
-
+    def update_staff_role(self, staff_id, new_role = None):
+        if staff_id in self.staff_members:
+            self.staff_members[self.id_][self.role] = new_role or self.staff_members[self.id_][self.role] 
+            print("updated!")
+        else:
+            print("not exist")
     def approve_maintenance_request(self, room_id, maintenance_type):
         pass
 
@@ -32,7 +37,7 @@ class Admin(Person):
         pass
     def display_role(self):
 
-        print(f"{self.name} is a admin!")
+        print(f"{self.first_name} is a admin!")
 
 if __name__ == "__main__":
     a1 = Admin("s400" , "mmd" , "arian" , 21)
