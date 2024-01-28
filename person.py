@@ -1,11 +1,12 @@
 from abc import ABC, abstractmethod
 
-class Person:
-    def __init__(self, id_, first_name, last_name, age):
+class Person(ABC):
+    def __init__(self, id_, first_name, last_name, age ,contact_info):
         self.id_ = id_
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+        self.contact_info =contact_info
     def update_contact_details(self, new_first_name=None, new_last_name=None, new_age=None):
         self.first_name = new_first_name or self.first_name
         self.last_name = new_last_name or self.last_name
@@ -19,4 +20,9 @@ class Person:
         pass
         
 if __name__ == "__main__":
-    p1 = Person("s400" , "mmd" , "reza" , 21)
+    try:
+
+        p1 = Person("s400" , "mmd" , "reza" , "12")
+    except:
+        print("value not ok!")
+    
