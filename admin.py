@@ -12,12 +12,16 @@ class Admin(Person):
         staff_role = input("new staff role: ")
         if staff_details.id_ not in self.staff_members:
             self.staff_members[staff_details.staff_id] = staff_details
-
+        else:
+            print("existed!")
         
 
     def remove_staff_member(self, staff_id):
-        pass
-
+        for obj_id in self.staff_members:
+            if obj_id == staff_id:
+                self.staff_members.pop(obj_id)
+            else:
+                print("not exist!")
     def update_staff_role(self, staff_id, new_role):
         pass
 
