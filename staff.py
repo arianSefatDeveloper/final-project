@@ -17,8 +17,14 @@ class Staff(Person):
             print(" booking successfully!")
         else:
             print("exists")
-    def check_out_guest(self, guest_id):
-        pass
+    def check_out_guest(self,room ,  guest_id):
+
+        if guest_id in self.guest_room:
+
+            self.guest_room.pop(guest_id)
+            room.room_is_available = False
+        else:
+            print("guest id not exist")
 
     # housekeeping
     def mark_room_cleaned(self, room_id):
