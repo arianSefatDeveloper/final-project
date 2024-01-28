@@ -28,7 +28,7 @@ class Staff(Person):
 
     # housekeeping
     def mark_room_cleaned(self, room_id):
-        pass
+        print(f"the room with {room_id} has been cleaned.")
 
     def request_cleaning_supplies(self):
         pass
