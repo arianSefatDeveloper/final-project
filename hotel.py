@@ -21,4 +21,8 @@ class Hotel:
 
 if __name__ == "__main__":
     p1 = Hotel("shiraz")
+    file = "log.text" 
+	# here shuld be our inputs
+    with open(file, "a") as file1:
+        file1.write(cmd+"\n")
     
