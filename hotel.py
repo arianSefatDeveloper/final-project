@@ -3,6 +3,7 @@ from staff import *
 from guest import *
 from room import *
 from admin import *
+from json_test import *
 
 class Hotel:
     def __init__(self, name):
@@ -20,3 +21,4 @@ class Hotel:
 
 if __name__ == "__main__":
     p1 = Hotel("shiraz")
+    
