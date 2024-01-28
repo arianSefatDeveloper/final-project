@@ -1,4 +1,7 @@
 from person import *
+from staff import *
+from room import *
+from hotle import *
 class Admin(Person):
     def __init__(self, id_, first_name, last_name, age):
         super().__init__(id_, first_name, last_name, age)
@@ -41,3 +44,10 @@ class Admin(Person):
 
 if __name__ == "__main__":
     a1 = Admin("s400" , "mmd" , "arian" , 21)
+    #error handeling
+    while True:
+        try:
+            a1.create_staff_account("400")
+            break
+        except:
+            print("try again...")
